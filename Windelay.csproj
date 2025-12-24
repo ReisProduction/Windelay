@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>Windelay.snk</AssemblyOriginatorKeyFile>
+    <Version>26.7.5</Version>
+    <Title>$(AssemblyName)</Title>
+    <Authors>ReisProduction</Authors>
+    <Product>$(Authors)</Product>
+    <Copyright>Copyright Reis Production 2025</Copyright>
+    <Description>Precise and customizable delay.</Description>
+    <PackageIcon>ReisProduction.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>$(AssemblyName); $(Authors)</PackageTags>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <AssemblyVersion>25.5.1.4</AssemblyVersion>
+    <FileVersion>25.5.1.4</FileVersion>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Platforms>x64</Platforms>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://studio.reisproduction.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ReisProduction/Windelay</RepositoryUrl>
+    <PackageReleaseNotes>Happy release Windelay!</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IsPublishable>False</IsPublishable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IsPublishable>False</IsPublishable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ReisProduction.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\Framework\v4.0.30319\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="ReisProduction.png">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="ReisProduction.Windelay.Models" />
+    <Using Include="ReisProduction.Windelay.Services.NativeMethods">
+      <Static>True</Static>
+    </Using>
+    <Using Include="ReisProduction.Windelay.Utilities" />
+    <Using Include="ReisProduction.Windelay.Utilities.Enums" />
+  </ItemGroup>
+
+</Project>
