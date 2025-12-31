@@ -8,7 +8,7 @@
     <PlatformTarget>x64</PlatformTarget>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>Windelay.snk</AssemblyOriginatorKeyFile>
-    <Version>26.7.5</Version>
+    <Version>26.7.15</Version>
     <Title>$(AssemblyName)</Title>
     <Authors>ReisProduction</Authors>
     <Product>$(Authors)</Product>
@@ -62,12 +62,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Using Include="ReisProduction.Windelay.Models" />
     <Using Include="ReisProduction.Windelay.Services.NativeMethods">
       <Static>True</Static>
     </Using>
-    <Using Include="ReisProduction.Windelay.Utilities" />
-    <Using Include="ReisProduction.Windelay.Utilities.Enums" />
+    <Using Include="System.Diagnostics" />
   </ItemGroup>
 
 </Project>
